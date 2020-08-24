@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ActionButton from './btnAction.js';
+import VoiceButton from './VoiceButton.js';
 import TechIcons from './TechIcons.js';
 import ScrollComponenet from './ScrollButton.js';
 import ScrollDown from './ScrollDownLanding.js';
@@ -25,7 +25,7 @@ class LandingDialog extends Component {
                     </FadeIn>
 
                     <FadeIn delay="2000" transitionDuration="1400">
-                        <ActionButton btnCaption={"Get In Touch"}></ActionButton>
+                        <VoiceButton></VoiceButton>
                     </FadeIn>
 
                     </div>
