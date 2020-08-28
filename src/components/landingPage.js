@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ActionButton from './btnAction.js';
 import SearchBar from './SearchBar.js';
-import TechIcons from './TechIcons.js';
+import TechIcons from './TechIconsLanding.js';
 import ScrollComponenet from './ScrollButton.js';
 import ScrollDown from './ScrollDownLanding.js';
 import FadeIn from 'react-fade-in';
@@ -88,6 +88,8 @@ class LandingDialog extends Component {
                 this.setState({mainRender: 'aboutMe'})
             } else if (data.intents[0].name == 'email') {
                 this.setState({mainRender: 'email'})
+            } else if (data.intents[0].name == 'skills') {
+                this.setState({mainRender: 'skills'})
             } else {
                 this.genericSelection(data.intents[0].name)
                 this.setState({mainRender: 'main'})
@@ -152,6 +154,19 @@ class LandingDialog extends Component {
                     <FadeIn delay="1500" transitionDuration="1200">
                         <p style={captionAboutMe} className="bgCaptionPara"></p>
                     </FadeIn>
+                </React.Fragment>
+            )
+        } else if (this.state.mainRender == 'skills') {
+            return (
+                <React.Fragment>
+                    <FadeIn delay="1000" transitionDuration="1000">
+                        <AnimateOnChange>
+                            <h1 style={header} className="bgCaptionHeading inline">  
+                                To Name a few...👇
+                            </h1>
+                        </AnimateOnChange>
+                    </FadeIn>
+                    <TechIcons></TechIcons>
                 </React.Fragment>
             )
         }
