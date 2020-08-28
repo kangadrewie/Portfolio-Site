@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ActionButton from './btnAction.js';
 import SearchBar from './SearchBar.js';
 import TechIcons from './TechIcons.js';
 import ScrollComponenet from './ScrollButton.js';
@@ -14,6 +15,7 @@ class LandingDialog extends Component {
         super(props);
 
         this.state = {
+            matches: window.matchMedia("(min-width: 1025px)").matches,
 
             greetingColl: ['Hi there. 👋', 'Hey! 👋', 'How can I help? 😁', 'Hello. 👌', 'Welcome. 🤙', 'What can I do for you? 😀', 'Nice to meet you.🤝'],
             emotionalGreetingColl: ['I\'m Great. Thanks 😀', 'Very Well, You? 🙌', 'All Good. You? 😊'],
@@ -46,6 +48,10 @@ class LandingDialog extends Component {
         }
     }
 
+    componentDidMount() {
+        const handler = e => this.setState({matches: e.matches});
+        window.matchMedia("(min-width: 1025px)").addListener(handler);
+    }
     mathsExpression = (value) => {
         let payload = encodeURIComponent(value)
         let prefix = ['Ok...', 'Easy. ']
@@ -161,7 +167,14 @@ class LandingDialog extends Component {
                     <div>
                         {this.mainRender()}
                         <FadeIn delay="2000" transitionDuration="1400">
-                            <SearchBar intent={this.handleIntent}></SearchBar>
+                            {this.state.matches && (
+                                <SearchBar intent={this.handleIntent}></SearchBar>
+                            )}
+                            {!this.state.matches && (
+                                <div style={{transform: 'translateY(-20px)'}}>
+                                    <ActionButton btnCaption={'Get In Touch'}></ActionButton>
+                                </div>
+                            )}
                         </FadeIn>
                     </div>
                 </div> 

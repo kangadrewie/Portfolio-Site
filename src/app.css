@@ -280,6 +280,10 @@ body {
         margin-right: auto;
     }
 
+    .terminal {
+        visibility: hidden;
+    }
+
     .bgCaptionHeading {
         font-size: 4.5em !important;
         
