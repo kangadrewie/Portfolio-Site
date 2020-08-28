@@ -153,7 +153,7 @@ class SearchBar extends Component {
 
 const messageBox = {
     width: '500px',
-    height: '170px',
+    maxHeight: '170px',
     overflowY: 'auto',
     overflowX: 'hidden'
 }
