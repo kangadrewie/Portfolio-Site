@@ -13,6 +13,9 @@ import ProjectModal from './components/ProjectModal.js';
 import ContactSection from './components/ContactSection.js';
 import Footer from './components/Footer.js';
 
+require('dotenv').config();
+
+
 class App extends Component {
 
     constructor(props) {
