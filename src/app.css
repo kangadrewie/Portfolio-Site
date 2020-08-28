@@ -1,3 +1,100 @@
+<<<<<<< HEAD
+=======
+.blink {
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.marginLeft {
+    margin-left: 40px;
+}
+
+.highlight {
+    font-color: orange;
+    font-weight: 600;
+    color: orange !important;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.hide {
+    visibility: hidden;
+    position: absolute;
+    top: -1000px;
+}
+
+.terminal {
+    transform: translateX(-10px);
+    max-width: 500px;
+    margin-top: 40px !important;
+    padding-top: 40px !important;
+}
+
+.inputBox::selection {
+  color: transparent;
+  background: rgba(0, 0, 0, 0); /* WebKit/Blink Browsers */
+}
+
+.inputBox::-moz-selection {
+  color: transparent;
+  background: rgba(0, 0, 0, 0); /* WebKit/Blink Browsers */
+}
+
+::selection {
+    color: white;
+    background: orange;
+}
+
+.messageBox::-webkit-scrollbar {
+    width: 0px !important;
+    background: transparent !important;
+}
+
+.messageBox::-webkit-scrollbar-track {
+    background: none;
+}
+
+.messageBox::-webkit-scrollbar-track {
+
+}
+
+.searchBar {
+	width: 100%;
+	padding: 0px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.27);
+	background-color: white;
+	color: white;
+	outline: none;
+	color: rgba(0, 0, 0, 0.87);
+	border-radius: 5px 5px 5px 5px;
+    -moz-transition: all 0.3s;
+	transition: all 0.3s;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.cursor {
+    width: 10px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-family: monospace !important;
+    font-size: 1.5em !important;
+}
+
+.Typewriter__wrapper, .Typewriter__cursor {
+    font-family: monospace !important;
+    font-size: 1.5em !important;
+}
+
+>>>>>>> site_2/master
 .containerAG {
     position: relative;
     height: auto;
@@ -19,6 +116,17 @@
     -moz-filter: brightness(0.45);
 }
 
+<<<<<<< HEAD
+=======
+.landingVisualiser {
+    padding-top: 40px;
+    position: relative;
+    display: inline;
+    width: 100px;
+    height: 75px;
+}
+
+>>>>>>> site_2/master
 .card {
     cursor: pointer !important;
 }

@@ -11,7 +11,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+<<<<<<< HEAD
     "js-base64": "^3.2.3",
+=======
+    "jquery": "^3.5.1",
+    "js-base64": "^3.2.3",
+    "node-wit": "^6.0.0",
+>>>>>>> site_2/master
     "react": "^16.13.1",
     "react-animate-on-scroll": "^2.1.5",
     "react-animation": "^1.2.2",
@@ -20,6 +26,10 @@
     "react-code-blocks": "0.0.8",
     "react-dom": "^16.13.1",
     "react-fade-in": "^1.1.0",
+<<<<<<< HEAD
+=======
+    "react-input-autosize": "^2.2.2",
+>>>>>>> site_2/master
     "react-mic": "^12.4.6",
     "react-reveal": "^1.2.2",
     "react-scripts": "3.4.1",
@@ -27,11 +37,21 @@
     "react-slick": "^0.27.1",
     "react-spring": "^8.0.27",
     "react-syntax-highlighter": "^12.2.1",
+<<<<<<< HEAD
+=======
+    "react-typing-effect": "^2.0.3",
+>>>>>>> site_2/master
     "react-visibility-sensor": "^5.1.1",
     "rebass": "^3.0.0-12",
     "semantic-ui-react": "^0.88.2",
     "serve": "^11.3.2",
+<<<<<<< HEAD
     "slick-carousel": "^1.8.1"
+=======
+    "slick-carousel": "^1.8.1",
+    "typewriter-effect": "^2.13.1",
+    "words-to-numbers": "^1.5.1"
+>>>>>>> site_2/master
   },
   "scripts": {
     "dev": "react-scripts start",
