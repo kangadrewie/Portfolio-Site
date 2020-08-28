@@ -1,39 +1,10 @@
 import React, {Component} from 'react';
-<<<<<<< HEAD
-import ActionButton from './btnAction.js';
-=======
 import SearchBar from './SearchBar.js';
->>>>>>> site_2/master
 import TechIcons from './TechIcons.js';
 import ScrollComponenet from './ScrollButton.js';
 import ScrollDown from './ScrollDownLanding.js';
 import FadeIn from 'react-fade-in';
 import Background from '../images/landingportrait.png';
-<<<<<<< HEAD
-
-
-class LandingDialog extends Component {
-    render() {
-        return(
-            <div id="homepage" style={container}>
-                <FadeIn transitionDuration="1400">
-                    <div style={bg} className="bgMobile"></div>
-                </FadeIn>
-                <div style={dialog} className="bgCaptionContainer">
-                    <div>
-                    <FadeIn delay="1000" transitionDuration="1000">
-                        <h1 style={header} className="bgCaptionHeading">{this.props.heading}</h1>
-                    </FadeIn>
-
-                    <FadeIn delay="1500" transitionDuration="1200">
-                        <p style={caption} className="bgCaptionPara">{this.props.caption}</p>
-                    </FadeIn>
-
-                    <FadeIn delay="2000" transitionDuration="1400">
-                        <ActionButton btnCaption={"Get In Touch"}></ActionButton>
-                    </FadeIn>
-
-=======
 import { AnimateOnChange } from 'react-animation';
 import Bounce from 'react-reveal/Bounce';
 
@@ -192,7 +163,6 @@ class LandingDialog extends Component {
                         <FadeIn delay="2000" transitionDuration="1400">
                             <SearchBar intent={this.handleIntent}></SearchBar>
                         </FadeIn>
->>>>>>> site_2/master
                     </div>
                 </div> 
                 <ScrollComponenet></ScrollComponenet>
@@ -246,9 +216,6 @@ const header = {
     fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: '700',
     fontColor: 'grey',
-<<<<<<< HEAD
-    marginBottom: '0'
-=======
     marginBottom: '0',
     minWidth: '500px'
 }
@@ -261,7 +228,6 @@ const headerSub = {
     lineHeight: '0.8em',
     marginBottom: '30px',
     minWidth: '500px'
->>>>>>> site_2/master
 }
 
 const caption = {
@@ -269,9 +235,6 @@ const caption = {
     height: '50px',
     fontSize: '1.2em',
     fontFamily: 'Source Sans Pro, sans-serif',
-<<<<<<< HEAD
-    fontWeight: '200'
-=======
     fontWeight: '200',
     minWidth: '500px'
 }
@@ -284,7 +247,6 @@ const captionAboutMe = {
     fontSize: '1.5em',
     paddingTop: '10px',
     minWidth: '500px'
->>>>>>> site_2/master
 }
 
 export default LandingDialog;

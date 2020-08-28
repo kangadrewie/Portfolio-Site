@@ -227,11 +227,7 @@ class App extends Component {
                 <div>
                     <Navigation></Navigation>
                     <BurgerIcon></BurgerIcon>
-<<<<<<< HEAD
-                    <LandingDialog heading={'I\'m Andrew.'} caption={caption}></LandingDialog>
-=======
                     <LandingDialog></LandingDialog>
->>>>>>> site_2/master
                 </div>
                 <div style={maxWidth}>
                     <SocialMedia></SocialMedia>
