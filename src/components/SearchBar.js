@@ -131,7 +131,7 @@ class SearchBar extends Component {
                                 </div>
                                 <div style={terminalMiddle}>
                                     <form id={index} onSubmit={this.handleSubmit} method="post">
-                                        <input className="inputBox" id={'row' + index} type="text" onChange={this.updateType} autoFocus onFocus={this.updateType} style={inputBox} maxLength="60" required="required" readOnly={(this.state.activeID == this.state.lastItem) ? false : true}></input>
+                                        <input className="inputBox" id={'row' + index} type="text" onChange={this.updateType} autoFocus onFocus={this.updateType} style={inputBox} maxLength="60" required="required" readOnly={(this.state.activeID == this.state.lastItem) ? false : true} spellcheck="false"></input>
                                             <ReactTypingEffect
                                                 style={typewriterStyle}
                                                 staticText={this.state.type[row]}
