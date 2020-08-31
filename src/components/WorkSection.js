@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import SectionHeading from './SectionHeading.js';
-import SectionWatermark from './SectionWatermark.js';
 import SectionParagraph from './SectionParagraph.js';
 import WorkHistory from './WorkHistory.js';
-import TechIcons from './TechIcons.js';
-import ScrollDown from './ScrollDown.js';
 
 
 class AboutMe extends Component {

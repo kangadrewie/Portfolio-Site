@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FadeIn from 'react-fade-in';
-import VisibilitySensor from 'react-visibility-sensor';
 import Fade from 'react-reveal/Fade';
 
 class TechIcons extends Component {
@@ -136,16 +135,6 @@ const font = {
     fontSize: '1.1em',
 }
 
-const p = {
-    textAlign: 'center',
-    opacity: '0',
-    top: '10px'
-}
-
-const tableHead = {
-    height: '10px'
-}
-
 const heading = {
     fontWeight: '400',
     fontFamily: 'monospace',
@@ -156,10 +145,6 @@ const heading = {
 
 const container = {
     positon: 'relative',
-}
-
-const langDescription = {
-    width: '100%'
 }
 
 export default TechIcons;

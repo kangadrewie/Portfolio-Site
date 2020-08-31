@@ -3,7 +3,6 @@ import ActionButton from './btnAction.js';
 import SearchBar from './SearchBar.js';
 import TechIcons from './TechIconsLanding.js';
 import ScrollComponenet from './ScrollButton.js';
-import ScrollDown from './ScrollDownLanding.js';
 import FadeIn from 'react-fade-in';
 import Background from '../images/landingportrait.png';
 import { AnimateOnChange } from 'react-animation';
@@ -43,7 +42,7 @@ class LandingDialog extends Component {
             favouriteBookColl: ['1984. 🕵'],
             studyingColl: ['MSc Comp Sci in TU Dublin. 👨‍💻'],
             mainRender: 'main',
-            heading: "I\'m Andrew",
+            heading: "I'm Andrew",
             caption: "And I’m a passionate and aspiring Software Engineer based in Dublin. I am open to explore any exciting opportunities or challenges so don’t be shy!"
         }
     }
@@ -82,13 +81,13 @@ class LandingDialog extends Component {
     handleIntent = (data) => {
         console.log(data)
         try {
-            if (data.intents[0].name == 'maths') {
+            if (data.intents[0].name === 'maths') {
                 this.mathsExpression(data.entities['wit$math_expression:math_expression'][0]['value'])
-            } else if (data.intents[0].name == 'aboutMe') {
+            } else if (data.intents[0].name === 'aboutMe') {
                 this.setState({mainRender: 'aboutMe'})
-            } else if (data.intents[0].name == 'email') {
+            } else if (data.intents[0].name === 'email') {
                 this.setState({mainRender: 'email'})
-            } else if (data.intents[0].name == 'skills') {
+            } else if (data.intents[0].name === 'skills') {
                 this.setState({mainRender: 'skills'})
             } else {
                 this.genericSelection(data.intents[0].name)
@@ -101,7 +100,7 @@ class LandingDialog extends Component {
     }
 
     mainRender = () => {
-        if (this.state.mainRender == 'main') {
+        if (this.state.mainRender === 'main') {
             return(
                 <React.Fragment>
                     <FadeIn delay="1000" transitionDuration="1000">
@@ -115,7 +114,7 @@ class LandingDialog extends Component {
                     </FadeIn>
                 </React.Fragment>
             )
-        } else if (this.state.mainRender == 'aboutMe') {
+        } else if (this.state.mainRender === 'aboutMe') {
             return(
                 <React.Fragment>
                     <FadeIn delay="1000" transitionDuration="1000">
@@ -124,7 +123,7 @@ class LandingDialog extends Component {
                                 At this font size?
                             </h1>
                             <h1 style={headerSub} className="bgCaptionHeading">
-                                Impossible. 😋
+                                Impossible. <span role="img" aria-label="tongue-out">😋</span>
                             </h1>
                         </AnimateOnChange>
                     </FadeIn>
@@ -136,15 +135,15 @@ class LandingDialog extends Component {
                     </FadeIn>
                 </React.Fragment>
             )
-        } else if (this.state.mainRender == 'email') {
+        } else if (this.state.mainRender === 'email') {
             return(
                 <React.Fragment>
                     <FadeIn delay="1000" transitionDuration="1000">
                         <AnimateOnChange>
-                            <h1 style={header} className="bgCaptionHeading inline">Sure... 👉  
+                            <h1 style={header} className="bgCaptionHeading inline">Sure... <span role="img" aria-label="point-right">👉</span>  
                                     <a href="mailto:andrewgorman101@gmail.com">
                                         <Bounce top>
-                                            <div className="inline" style={{paddingLeft: '20px'}}> ✉️</div>
+                                            <span role="img" aria-label="envelope" className="inline" style={{paddingLeft: '20px'}}> ✉️</span>
                                         </Bounce> 
                                     </a>
                             </h1>
@@ -156,13 +155,13 @@ class LandingDialog extends Component {
                     </FadeIn>
                 </React.Fragment>
             )
-        } else if (this.state.mainRender == 'skills') {
+        } else if (this.state.mainRender === 'skills') {
             return (
                 <React.Fragment>
                     <FadeIn delay="1000" transitionDuration="1000">
                         <AnimateOnChange>
                             <h1 style={header} className="bgCaptionHeading inline">  
-                                To Name a few...👇
+                                To Name a few...<span role="img" aria-label="point-down">👇</span>
                             </h1>
                         </AnimateOnChange>
                     </FadeIn>

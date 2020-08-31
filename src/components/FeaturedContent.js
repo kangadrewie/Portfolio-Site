@@ -4,7 +4,7 @@ class FeaturedContent extends Component {
     render() {
         let alignment = this.props.alignment;
         return(
-            <div style={container} className={(alignment == "left") ? "eight wide column left floated left aligned" : "eight wide column right floated right aligned"}>
+            <div style={container} className={(alignment === "left") ? "eight wide column left floated left aligned" : "eight wide column right floated right aligned"}>
                 <div className="row" style={featured}>Featured Project</div>
                 <div className="row" style={title}>{this.props.title}</div>
                 <div className="row" style={desc}>{this.props.caption}</div>
@@ -42,17 +42,6 @@ const desc = {
     fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: '200',
     fontSize: '1.3em',
-}
-
-const explore = {
-
-}
-
-const icon = {
-    color: 'white',
-    position: 'absolute',
-    bottom: '12%',
-    right: '12%'
 }
 
 export default FeaturedContent;

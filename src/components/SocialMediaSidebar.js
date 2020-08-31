@@ -30,32 +30,32 @@ class SocialMedia extends Component {
                             <tbody>
                                 <tr>
                                     <td id="socialIcons">
-                                        <a href="https://www.linkedin.com/in/drewgorman" id="LinkedIn" target="_blank" onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseLeave}> 
+                                        <a href="https://www.linkedin.com/in/drewgorman" id="LinkedIn" target="_blank" onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseLeave} rel="noopener noreferrer"> 
                                             <i className="large linkedin icon" ></i>
                                         </a>
                                     </td>
                                     <td>
-                                        {this.state.isHovering == "LinkedIn" && <Fade duration={250}><p>LinkedIn</p></Fade>}
+                                        {this.state.isHovering === "LinkedIn" && <Fade duration={250}><p>LinkedIn</p></Fade>}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td id="socialIcons">
-                                        <a href="https://github.com/kangadrewie" target="_blank" id="GitHub" onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseLeave}>
+                                        <a href="https://github.com/kangadrewie" target="_blank" id="GitHub" onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseLeave} rel="noopener noreferrer">
                                             <i className="large github icon" ></i>
                                         </a>
                                     </td>
                                     <td>
-                                        {this.state.isHovering == "GitHub" && <Fade duration={250}><p>GitHub</p></Fade>}
+                                        {this.state.isHovering === "GitHub" && <Fade duration={250}><p>GitHub</p></Fade>}
                                     </td>
                                 </tr>
                                 <tr>
                                     <td id="socialIcons">
-                                        <a href="https://www.dropbox.com/s/y7l3im7n48l2pt1/Andrew%20Gorman%20CV.pdf?dl=0" target="_blank" id="CV" onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseLeave}>
+                                        <a href="https://www.dropbox.com/s/y7l3im7n48l2pt1/Andrew%20Gorman%20CV.pdf?dl=0" target="_blank" id="CV" onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseLeave} rel="noopener noreferrer">
                                             <i className="large file alternate icon" ></i>
                                         </a>
                                     </td>
                                     <td>
-                                        {this.state.isHovering == "CV" && <Fade duration={250}><p>CV</p></Fade>}
+                                        {this.state.isHovering === "CV" && <Fade duration={250}><p>CV</p></Fade>}
                                     </td>
                                 </tr>
                                 <tr>
@@ -65,7 +65,7 @@ class SocialMedia extends Component {
                                         </a>
                                     </td>
                                     <td>
-                                        {this.state.isHovering == "Email" && <Fade duration={250}><p>Email</p></Fade>}
+                                        {this.state.isHovering === "Email" && <Fade duration={250}><p>Email</p></Fade>}
                                     </td>
                                 </tr>
                             </tbody>
@@ -75,14 +75,5 @@ class SocialMedia extends Component {
         );
     };
 };
-
-const icons = {
-    position: 'fixed',
-    top: 'calc(50% - 100px)',
-    left: '25px',
-    height: '200px',
-    color: 'rgba(0, 0, 0, 0.5)',
-    zIndex: '99'
-}
 
 export default SocialMedia;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { Base64 } from 'js-base64';
 import { AnimateOnChange } from 'react-animation';
 
 //  Fetch Repos - https://api.github.com/users/kangadrewie/repos
@@ -8,13 +7,8 @@ import { AnimateOnChange } from 'react-animation';
 //  Return Files Content in Base64 using file url from above, for example - https://api.github.com/repos/kangadrewie/AmazonCurrencyConverter/git/blobs/f872dc0e12fa295e5aad94b3e286e915ffe218ef
 
 class CodeBlock extends Component {
-    constructor(props) {
-        super(props)
-
-    }
-
     render() {
-        if (this.props.error == true) {
+        if (this.props.error === true) {
             return(
                 <AnimateOnChange>
                     <div className="ui segment codeBlockMobile" style={errorContainer}>
@@ -148,10 +142,6 @@ const tomorrowInline = {
     "fontWeight": "bold"
   }
 
-}
-
-const codeBlockStyle = {
-    width: '50px'
 }
 
 const container = {

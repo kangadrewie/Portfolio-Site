@@ -12,44 +12,15 @@ class ProjectItem extends Component {
                     <div style={title} className="folderTitle">{project.name}</div>
                     <div style={desc} className="folderDesc">{project.caption}</div>
                     <i className="large share square icon shareIcon" style={iconShare}></i>
-                    <a key={project.gitRepo} ></a>
                 </div>
             </div>
         ))
     }
 }
 
-const card = {
-    position: 'relative',
-    width: '220px',
-    height: '220px',
-    cursor: 'pointer',
-    marginBottom: '25px',
-    padding: '0',
-    border: '0px',
-    cursor: 'pointer'
-}
-
-const imageContainer = {
-    maxWidth: 'auto',
-    height: 'auto',
-    overflow: 'hidden'
-}
-
 const image = {
     overflow: 'hidden',
     zIndex: '-10'
-}
-
-const overlay = {
-    position: 'absolute',
-    width: '100%',
-    height: '101%',
-    top: '0',
-    left: '0',
-    opacity: '0.05',
-    backgroundColor: 'orange',
-    zIndex: '-1'
 }
 
 const iconFolder = {

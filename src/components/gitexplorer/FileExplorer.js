@@ -77,7 +77,7 @@ class FileExplorer extends Component {
                         <thead>
                             <tr><th colSpan="3" style={heading}>
                                 File Explorer
-                                <i style={backIcon} className={(this.state.goBackDirectory == true) ? 'arrow alternate circle left icon' : ''} onClick={this.goBackDirectory}></i>
+                                <i style={backIcon} className={(this.state.goBackDirectory === true) ? 'arrow alternate circle left icon' : ''} onClick={this.goBackDirectory}></i>
                                 </th>
                             </tr>
                         </thead>

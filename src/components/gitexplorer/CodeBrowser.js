@@ -35,7 +35,7 @@ class App extends Component {
     }
 
     fileAction = (obj) => {
-        if (obj.action.type == 'blobs') {
+        if (obj.action.type === 'blobs') {
             this.retrieveFileInformation(this.props.selectedProject.gitRepo, obj.action.branchID)
         }
     }

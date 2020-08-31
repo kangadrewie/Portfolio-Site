@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SectionParagraph from './SectionParagraph.js';
 import Slider from 'react-slick';
 import CodeBrowser from './gitexplorer/CodeBrowser.js';
 import { Modal } from 'semantic-ui-react';
@@ -45,8 +44,6 @@ class ProjectModal extends Component {
             slidesToScroll: 1
         };
 
-        const description = "A Google Chrome Extension currency converter for Amazon.co.uk users. The extension retrieves latest exchange rates from an open source API and pulls the targeted currency from the DOM. The extension then converts and updates the DOM with the latest rate in the users selected currency. Currently, the extension only supports Amazon.co.uk users but further support for other Amazon regions will be implemented."
-
         return(
             <Modal
                 open={this.props.modal}
@@ -64,7 +61,7 @@ class ProjectModal extends Component {
                             {this.props.project.imageGallery.map((imageSRC) => {
                                 return(
                                     <div style={sliderImages}> 
-                                        <img className="sliderImagesMobile" style={image} src={process.env.PUBLIC_URL + "/" + imageSRC}/>
+                                        <img className="sliderImagesMobile" style={image} src={process.env.PUBLIC_URL + "/" + imageSRC} alt={imageSRC}/>
                                     </div>
                                 )
                             })}
@@ -83,10 +80,10 @@ class ProjectModal extends Component {
                                             this.props.project.avail.map((avail) => {
                                                 return(
                                                     <td style={availCol} id="socialIcons">
-                                                        <a target="_blank" href={
+                                                        <a target="_blank" rel="noopener noreferrer" href={
                                                             (avail === "Heroku") ? this.props.project.heroku :
                                                             (avail === "Google Play Store") ? this.props.project.playStore : 
-                                                            (avail === "GitHub") ? "https://github.com/kangadrewie/" + this.props.project.gitRepo : ''}>
+                                                            (avail === "GitHub") ? "https://github.com/kangadrewie/" + this.props.project.gitRepo : '#home'}>
                                                             <i className={
                                                                 (avail === "Google Play Store") ? "big google play icon" : 
                                                                 (avail === "Heroku") ? "big desktop icon" : 

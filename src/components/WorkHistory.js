@@ -50,7 +50,7 @@ class WorkHistory extends Component {
     }
 
     handleClick = (e) => {
-        if (e.currentTarget.id == 0) {
+        if (e.currentTarget.id === 0) {
             this.setState({selectedJob: 'job1'})
         } else {
             this.setState({selectedJob: 'job2'})
@@ -58,7 +58,6 @@ class WorkHistory extends Component {
     }
     
     render() {
-        let job = this.state.selectedJob;
         return(
             <Fade bottom>
                 <div style={container} className="ui grid">
@@ -68,8 +67,8 @@ class WorkHistory extends Component {
                             <ul style={list}>
                                 <WorkItem mobile={this.state.matches} workHistory={this.state.workHistory} onClick={this.handleClick}></WorkItem>
                             </ul>
-                            <span style={(this.state.selectedJob == 'job1') ? {transform: 'translateY(0px)'} : 
-                                    (this.state.selectedJob == 'job2') ? {transform: 'translateY(52px)'} : {transform: 'translateY(0px)'}} className="bar"></span>
+                            <span style={(this.state.selectedJob === 'job1') ? {transform: 'translateY(0px)'} : 
+                                    (this.state.selectedJob === 'job2') ? {transform: 'translateY(52px)'} : {transform: 'translateY(0px)'}} className="bar"></span>
                         </div>
                         <div style={descStyle} className="eleven wide column">
                             <WorkDesc details={this.state.workHistory[this.state.selectedJob]}></WorkDesc>
@@ -81,8 +80,8 @@ class WorkHistory extends Component {
                         <React.Fragment>
                             <div className="ui grid" style={mobileRow}>
                                     <WorkItem mobile={this.state.matches} workHistory={this.state.workHistory} onClick={this.handleClick}></WorkItem>
-                                <span style={(this.state.selectedJob == 'job1') ? {transform: 'translateX(0px)'} : 
-                                    (this.state.selectedJob == 'job2') ? {transform: 'translateX(100%)'} : {transform: 'translateX(0px)'}} className="bar"></span>
+                                <span style={(this.state.selectedJob === 'job1') ? {transform: 'translateX(0px)'} : 
+                                    (this.state.selectedJob === 'job2') ? {transform: 'translateX(100%)'} : {transform: 'translateX(0px)'}} className="bar"></span>
                             </div>
                             <div style={descStyle} className={(this.state.mobile === false) ? "sixteen wide column mobileWorkDesc" : "eleven wide column mobileWorkDesc"}>
                                 <WorkDesc details={this.state.workHistory[this.state.selectedJob]}></WorkDesc>

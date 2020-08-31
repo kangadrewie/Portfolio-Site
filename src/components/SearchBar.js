@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Typewriter from 'typewriter-effect';
 import ReactTypingEffect from 'react-typing-effect';
 
-
-let increment = 0;
-let len = 0;
-
 class SearchBar extends Component {
     constructor(props) {
         super(props);
@@ -61,7 +57,6 @@ class SearchBar extends Component {
     handleSubmit= (event) => {
         event.preventDefault() 
         let payload = encodeURIComponent(event.target[0].value);
-        let counter = 0
         this.postAPI(payload)
         let row = 'row' + (parseInt(event.target.id) + 1).toString()
         this.setState({type: { ...this.state.type, [row]: ''}})
@@ -131,13 +126,13 @@ class SearchBar extends Component {
                                 </div>
                                 <div style={terminalMiddle}>
                                     <form id={index} onSubmit={this.handleSubmit} method="post">
-                                        <input className="inputBox" id={'row' + index} type="text" onChange={this.updateType} autoFocus onFocus={this.updateType} style={inputBox} maxLength="60" required="required" readOnly={(this.state.activeID == this.state.lastItem) ? false : true} spellcheck="false"></input>
+                                        <input className="inputBox" id={'row' + index} type="text" onChange={this.updateType} autoFocus onFocus={this.updateType} style={inputBox} maxLength="60" required="required" readOnly={(this.state.activeID === this.state.lastItem) ? false : true} spellcheck="false"></input>
                                             <ReactTypingEffect
                                                 style={typewriterStyle}
                                                 staticText={this.state.type[row]}
                                                 speed={250}
                                                 typingDelay={250}
-                                                cursor={(row == lastItem) ? '_' : ' '}
+                                                cursor={(row === lastItem) ? '_' : ' '}
                                             />
                                     </form>
                                 </div>
@@ -186,11 +181,6 @@ const inputBox = {
     zIndex: '99'
 }
 
-const terminalRow = {
-    textAlign: 'left',
-    width: '100%'
-}
-
 const terminalLeft = {
     color: 'orange',
     float: 'left',
@@ -204,58 +194,6 @@ const terminalMiddle = {
     float: 'left',
     paddingTop: '3px',
     width: 'auto'
-}
-
-const terminalRight = {
-    float: 'left',
-    width: '25px'
-}
-
-const botRows = {
-    width: '502px !important',
-    minWidth: '502px !important'
-}
-
-const container = {
-    marginTop: '40px',
-    transform: 'translateX(-12px)'
-}
-
-const tableStyle = {
-}
-
-const searchBar = {
-	width: '500px',
-	borderRight: 'none',
-	marginRight: '5px',
-	padding: '0px',
-	height: '100%',
-	border: '0px solid rgba(0, 0, 0, 0.27)',
-	backgroundColor: 'white',
-	color: 'white',
-	outline: 'none',
-	color: 'rgba(0, 0, 0, 0.87)',
-	borderRadius: '5px 5px 5px 5px',
-    mozTransition: 'all 0.3s',
-	transition: 'all 0.3s',
-    caretColor: 'transparent',
-    fontFamily: 'monospace',
-    fontSize: '1.5em',
-}
-
-const searchButton = {
-    visibility: 'hidden',
-	width: '10px',
-    height: '10px',
-	border: '0px solid rgba(0, 0, 0, 0.27)',
-	textAlign: 'center',
-	borderRadius: '5px 5px 5px 5px',
-	cursor: 'pointer',
-	fontSize: '25px',
-	marginLeft: '7px',
-
-	backgroundColor: 'orange',
-	color: 'white'
 }
 
 export default SearchBar;

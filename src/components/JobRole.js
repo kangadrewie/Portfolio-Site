@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FadeIn from 'react-fade-in';
 
 class Role extends Component {
     render() {

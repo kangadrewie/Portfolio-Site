@@ -35,19 +35,19 @@ class BurgerIcon extends Component {
                             <td style={menuItem}>Contact</td>
                         </tr>
                     </a>
-                    <a className="menu-item" href="https://www.dropbox.com/s/0k9hbls47818dti/Andrew%20Gorman%20CV.pdf?dl=0" target="_blank">
+                    <a className="menu-item" href="https://www.dropbox.com/s/0k9hbls47818dti/Andrew%20Gorman%20CV.pdf?dl=0" target="_blank" rel="noopener noreferrer">
                         <tr style={row}>
                             <td><i className="large file alternate icon" style={icon}></i></td>
                             <td style={menuItem}>CV</td>
                         </tr>
                     </a>
-                    <a className="menu-item" href="https://www.linkedin.com/in/drewgorman" target="_blank">
+                    <a className="menu-item" href="https://www.linkedin.com/in/drewgorman" target="_blank" rel="noopener noreferrer">
                         <tr style={row}>
                             <td><i className="large linkedin icon" style={icon}></i></td>
                             <td style={menuItem}>LinkedIn</td>
                         </tr>
                     </a>
-                    <a className="menu-item" href="https://github.com/kangadrewie" target="_blank">
+                    <a className="menu-item" href="https://github.com/kangadrewie" target="_blank" rel="noopener noreferrer">
                         <tr style={row}>
                             <td><i className="large github icon" style={icon}></i></td>
                             <td style={menuItem}>Github</td>
@@ -61,9 +61,6 @@ class BurgerIcon extends Component {
 
 const menuItem = {
     paddingLeft: '15px'
-}
-
-const social = {
 }
 
 const row = {

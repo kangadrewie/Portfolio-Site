@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import WorkDesc from './WorkDescription.js';
 
 class WorkItem extends Component {
     constructor(props) {
@@ -12,7 +11,7 @@ class WorkItem extends Component {
 
     render() {
         console.log(this.props.mobile)
-        if (this.props.mobile == true) {
+        if (this.props.mobile === true) {
             return(
                 Object.keys(this.props.workHistory).map((work, i) => (
                         <li style={container}>
@@ -55,30 +54,6 @@ const container = {
 
 const columns = {
     textAlign: 'center',
-}
-
-const title = {
-    fontFamily: 'monospace',
-    fontSize: '1.4em',
-    fontWeight: '400',
-    cursor: 'pointer'
-}
-
-const meta = {
-    fontFamily: 'monospace',
-    fontSize: '1.2em',
-}
-
-const desc = {
-    fontFamily: 'Source Sans Pro',
-    fontSize: '1.2em',
-    fontWeight: '100'
-}
-
-const icon = {
-    display: 'inline',
-    color: 'orange',
-    paddingRight: '15px'
 }
 
 export default WorkItem;

@@ -3,11 +3,9 @@ import React, { Component } from 'react';
 import Navigation from './components/navigation.js';
 import BurgerIcon from './components/Menu.js';
 import LandingDialog from './components/landingPage.js';
-import ActionButton from './components/btnAction.js';
 import SocialMedia from './components/SocialMediaSidebar.js';
 import AboutMe from './components/AboutMe.js';
 import Work from './components/WorkSection.js';
-import CodeBrowser from './components/gitexplorer/CodeBrowser.js';
 import ProjectShowcase from './components/ProjectShowcase.js';
 import ProjectModal from './components/ProjectModal.js';
 import ContactSection from './components/ContactSection.js';
@@ -154,7 +152,6 @@ class App extends Component {
 
     lastUpdated = (repoName) => {
         this.setState({files: {}});
-        let branchID = 'master';
 
         fetch(`https://api.github.com/repos/kangadrewie/${repoName}/branches/master`)
         .then((response) => {
@@ -173,9 +170,9 @@ class App extends Component {
 
     selectedProject = (e) => {
         console.log(e.currentTarget.getAttribute('type'))
-        if (e.currentTarget.getAttribute('type') == 'featured') {
+        if (e.currentTarget.getAttribute('type') === 'featured') {
             this.state.featuredProjects.forEach((element, i) => {
-                if (element.gitRepo == e.currentTarget.id) {
+                if (element.gitRepo === e.currentTarget.id) {
                     let projectDetails = this.state.selectedProject
                     projectDetails.name = element.name
                     projectDetails.caption = element.caption
@@ -195,7 +192,7 @@ class App extends Component {
             });
        } else {
             this.state.projects.forEach((element, i) => {
-                if (element.gitRepo == e.currentTarget.id) {
+                if (element.gitRepo === e.currentTarget.id) {
                     let projectDetails = this.state.selectedProject
                     projectDetails.name = element.name
                     projectDetails.caption = element.caption
@@ -223,8 +220,6 @@ class App extends Component {
     }
  
     render() {
-        const caption = "And I’m a passionate and aspiring Software Engineer based in Dublin. I am open to explore any exciting opportunities or challenges so don’t be shy!";
-
         return(
             <React.Fragment>
                 <div>
@@ -250,14 +245,6 @@ const maxWidth = {
     position: 'relative',
     maxWidth: '700px',
     margin: '0 auto'
-}
-
-const GitExplorerContainer = {
-        width: '80%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        height: '782px',
-        boxShadow: 'none'
 }
 
 export default App;

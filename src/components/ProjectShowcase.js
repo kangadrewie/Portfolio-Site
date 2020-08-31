@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
 import ProjectItem from './ProjectItem.js';
 import SectionHeading from './SectionHeading.js';
-import SectionParagraph from './SectionParagraph.js';
 import FeaturedProject from './FeaturedProject.js';
-import SelectedProject from "./SelectedProject";
-import ScrollDown from './ScrollDown.js';
-import SectionWatermark from './SectionWatermark.js';
 import Slider from "react-slick";
 import Fade from 'react-reveal/Fade';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 class ProjectShowcase extends Component {
-     constructor(props) {
-        super(props);
-    }
-
     render() {
         const settings = {
             dots: true,
@@ -53,20 +45,6 @@ class ProjectShowcase extends Component {
     }
 };
 
-const overallContainer = {
-    position: 'relative',
-    padding: '0',
-    margin: '0',
-    minHeight: '800px',
-    height: '100vh',
-    display: 'block',
-}
-
-const heading = {
-    marginBottom: '44px',
-    paddingBottom: '44px'
-}
-
 const slider = {
     maxWidth: '700px',
     width: 'auto',
@@ -78,23 +56,6 @@ const container = {
     height: 'auto',
 }
 
-const content = {
-    display: 'inline-grid',
-    width: '100%',
-    height: 'auto',
-    alignItems: 'center',
-    justifyContent: 'center'
-}
-
-const featuredContainer = {
-    maxWidth: '700px',
-    overflow: 'visible',
-    marginTop: '50px',
-    marginBottom: '80px',
-    marginLeft: 'auto',
-    marginRight: 'auto'
-}
-
 const otherProjectContainer = {
     position: 'relative',
     display: 'flex',
@@ -103,11 +64,6 @@ const otherProjectContainer = {
     marginTop: '30px',
     marginLeft: 'auto',
     marginRight: 'auto'
-}
-
-const row = {
-    width: '100%',
-    justifyContent: 'space-between'
 }
 
 export default ProjectShowcase;

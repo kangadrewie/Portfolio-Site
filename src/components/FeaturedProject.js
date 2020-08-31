@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import FeaturedImage from './FeaturedImage.js';
 import FeaturedContent from './FeaturedContent.js';
-import Fade from 'react-reveal/Fade';
 
 class FeaturedProject extends Component {
     constructor(props) {
@@ -31,7 +30,7 @@ class FeaturedProject extends Component {
                         </div>
                   </div>
            )
-        } if (this.props.alignment == 'left') {
+        } if (this.props.alignment === 'left') {
             return(
                     <div className="ui grid featuredMobile" style={global}>
                         <div className={(this.state.matches) ? "eight wide column mobileCardContainer" : "sixteen wide column mobileCardContainer"} type={"featured"}  style={container} id={this.props.gitRepo} onClick={this.props.selectedProject}>

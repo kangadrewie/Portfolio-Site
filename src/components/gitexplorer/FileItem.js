@@ -44,8 +44,8 @@ class FileItem extends Component {
                         <td className="left aligned" style={fileName}>
                             <i style={iconStyle} className={
                                  // Conditional File Extension Icon
-                                (fileItem[obj].type == 'tree') ? 'folder icon' :
-                                (fileExt === 'py' || fileExt == 'pyc') ? 'python icon' :
+                                (fileItem[obj].type === 'tree') ? 'folder icon' :
+                                (fileExt === 'py' || fileExt === 'pyc') ? 'python icon' :
                                 (fileExt === 'html') ? 'html5 icon' :
                                 (fileExt === 'js') ? 'js icon' :
                                 (fileExt === 'sh') ? 'server icon' :
@@ -53,7 +53,7 @@ class FileItem extends Component {
                                 (fileExt === 'css') ? 'css3 alternate icon' :
                                 (fileExt === 'txt') ? 'file outline icon' :
                                 (fileExt === 'zip') ? 'zip icon' :
-                                (fileItem[obj].type == 'tree') ? '' : 'file icon'
+                                (fileItem[obj].type === 'tree') ? '' : 'file icon'
                             }></i>
                             {fileItem[obj].path}
                         </td>

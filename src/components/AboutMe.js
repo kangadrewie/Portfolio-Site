@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import SectionHeading from './SectionHeading.js';
-import SectionWatermark from './SectionWatermark.js';
 import SectionParagraph from './SectionParagraph.js';
-import ScrollDown from './ScrollDown.js';
 import TechIcons from './TechIcons.js';
 import { Spring } from 'react-spring/renderprops';
 import VisibilitySensor from 'react-visibility-sensor';
@@ -44,12 +42,5 @@ const content = {
     width: '100%',
     height: 'auto',
 }
-
-const watermark = {
-    bottom: '500px',
-    marginBottom: '500px',
-    paddingBottom: '500px'
-}
-
 
 export default AboutMe;
