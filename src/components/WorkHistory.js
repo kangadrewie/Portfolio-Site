@@ -50,7 +50,7 @@ class WorkHistory extends Component {
     }
 
     handleClick = (e) => {
-        if (e.currentTarget.id === 0) {
+        if (e.currentTarget.id === '0') {
             this.setState({selectedJob: 'job1'})
         } else {
             this.setState({selectedJob: 'job2'})
