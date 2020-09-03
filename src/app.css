@@ -353,6 +353,7 @@ body {
 
     .mobileJobItem {
         padding: 0px !important;
+        padding-left: 10px !important;
         text-align: center !important;
     }
 
