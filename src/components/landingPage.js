@@ -263,7 +263,6 @@ const caption = {
     fontSize: '1.2em',
     fontFamily: 'Source Sans Pro, sans-serif',
     fontWeight: '200',
-    minWidth: '500px'
 }
 
 const captionAboutMe = {
